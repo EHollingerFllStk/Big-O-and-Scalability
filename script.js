@@ -16,7 +16,7 @@
 
 // }
 
-findNemo(everyone);  // 0(n) --> Linear Time
+//findNemo(everyone);  // 0(n) --> Linear Time
 
 // Constant Time O(1) - excellent
 
@@ -45,6 +45,7 @@ findNemo(everyone);  // 0(n) --> Linear Time
 
 // Answer: Big O(3 + 4n) - linear time
 
+
 //Exercise 2
 // What is the Big O of the below function? (Hint, you may want to go line by line)
 // function anotherFunChallenge(input) {
@@ -66,3 +67,23 @@ findNemo(everyone);  // 0(n) --> Linear Time
 
 //Linear O(n)  Big O(4+5n)
 
+//Big O Rule 2 - Drop the Constants
+
+function PrintFirstItemThenFirstHalfThenSayHi100Times(items) {
+  console.log(items[0]);
+
+  var middleIndex = Math.floor(items.length / 2);
+  var index = 0;
+
+  while (index < middleIndex) {
+    console.log(items[index]);
+    index++;
+  }
+
+  for (var i = 0; i < 100; i++) {
+    console.log('hi');
+  }
+
+}
+
+//Big O (1 + n/2 + 100) --> O(n + 1) --> O(n) drop the constants
