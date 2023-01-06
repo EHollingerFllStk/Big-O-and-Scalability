@@ -1,20 +1,22 @@
 //Linear Time - O(n) - good
 
-// const nemo = ['nemo'];
-// const everyone = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank'];
-// const large = new Array(100).fill('nemo');
+//const nemo = ['nemo'];
+// const everyone = ['dory', 'nemo', 'bruce', 'marlin', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank',];
+// //const large = new Array(100).fill('nemo');
 
 // function findNemo(array) {
 
 //   for (let i = 0; i < array.length; i++) {
+//     console.log('running')
 //     if (array[i] === 'nemo') {
 //       console.log('Found NEMO!');
+//       break;
 //     }
 //   }
 
 // }
 
-// findNemo(large);  // 0(n) --> Linear Time
+findNemo(everyone);  // 0(n) --> Linear Time
 
 // Constant Time O(1) - excellent
 
