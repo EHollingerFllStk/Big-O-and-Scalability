@@ -45,7 +45,6 @@
 
 // Answer: Big O(3 + 4n) - linear time
 
-
 //Exercise 2
 // What is the Big O of the below function? (Hint, you may want to go line by line)
 // function anotherFunChallenge(input) {
