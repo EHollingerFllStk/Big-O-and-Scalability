@@ -68,21 +68,35 @@
 
 //Big O Rule 2 - Drop the Constants
 
-function PrintFirstItemThenFirstHalfThenSayHi100Times(items) {
-  console.log(items[0]);
+// function PrintFirstItemThenFirstHalfThenSayHi100Times(items) {
+//   console.log(items[0]);
 
-  var middleIndex = Math.floor(items.length / 2);
-  var index = 0;
+//   var middleIndex = Math.floor(items.length / 2);
+//   var index = 0;
 
-  while (index < middleIndex) {
-    console.log(items[index]);
-    index++;
-  }
+//   while (index < middleIndex) {
+//     console.log(items[index]);
+//     index++;
+//   }
 
-  for (var i = 0; i < 100; i++) {
-    console.log('hi');
-  }
+//   for (var i = 0; i < 100; i++) {
+//     console.log('hi');
+//   }
 
-}
+// }
 
 //Big O (1 + n/2 + 100) --> O(n + 1) --> O(n) drop the constants
+
+//Big O Rule 3 - Different Terms for Inputs
+
+function compressBoxesTwice(boxes, boxes2) {
+  boxes.forEach(function(boxes) {
+    console.log(boxes);
+  });
+
+  boxes2.forEach(function(boxes) {
+    console.log(boxes);
+  });
+}
+
+//O(2n)-- > drop the constants-- > O(n) , but diff terms for inputs so that O(a+b)
