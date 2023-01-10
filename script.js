@@ -66,6 +66,8 @@
 
 //Linear O(n)  Big O(4+5n)
 
+//Big O Rule 1 - Always Worst Case - always default to the worst case scenario in terms of scalability
+
 //Big O Rule 2 - Drop the Constants
 
 // function PrintFirstItemThenFirstHalfThenSayHi100Times(items) {
@@ -155,3 +157,11 @@ printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
 
 //O(n+ n^2) --> O(n^2) --> drop the n and keep the dominant term O(n^2)
 
+//All array methods have a Big O cost associated with them:
+  //Ex .pop() is O(1) 
+  //    .unshift is O(n)
+
+//Certain data structures cost less for ex why use an array vs an object. Array might be less bu object allows use of more efficient functions.
+
+//Data Structures - ways to store data
+//Algorithms - functions/ways to  use data structures to write programs
