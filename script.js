@@ -89,14 +89,48 @@
 
 //Big O Rule 3 - Different Terms for Inputs
 
-function compressBoxesTwice(boxes, boxes2) {
-  boxes.forEach(function(boxes) {
-    console.log(boxes);
-  });
+// function compressBoxesTwice(boxes, boxes2) {
+//   boxes.forEach(function(boxes) {
+//     console.log(boxes);
+//   });
 
-  boxes2.forEach(function(boxes) {
-    console.log(boxes);
-  });
-}
+//   boxes2.forEach(function(boxes) {
+//     console.log(boxes);
+//   });
+// }
 
 //O(2n)-- > drop the constants-- > O(n) , but diff terms for inputs so that O(a+b)
+
+///////  O(n^2)  ////////
+//Ex interview Question     *********************
+//Log all pairs of array
+const boxes = ['a', 'b', 'c', 'd', 'e'];
+
+function logAllPairsOfArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      console.log(array[i], array[j])
+    }
+  }
+}
+
+logAllPairsOfArray(boxes)
+
+///  O(n*n) --> O(n^2) - Quadratic Time - not effecient (Horrible!)
+// Interview question make O(n^2) more efficient 
+
+//Rule 3 - Part 2
+// function compressBoxesTwice(boxes, boxes2) {
+//   boxes.forEach(function(boxes) {
+//     console.log(boxes);
+//   });
+
+//   boxes2.forEach(function(boxes) {
+//     console.log(boxes);
+//   });
+// }
+
+//O(2n)-- > drop the constants-- > O(n) , but diff terms for inputs so that O(a+b) because 2 different arrays.
+//If O(a*b) then loops are nested and O(n^2)
+//Any step in the same indentation you add
+//Any step that is nested you multiply
