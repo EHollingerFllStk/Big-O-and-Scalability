@@ -157,6 +157,8 @@ printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
 
 //O(n+ n^2) --> O(n^2) --> drop the n and keep the dominant term O(n^2)
 
+//Scaleable means we worry about very large inputs
+
 //All array methods have a Big O cost associated with them:
   //Ex .pop() is O(1) 
   //    .unshift is O(n)
@@ -165,3 +167,10 @@ printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
 
 //Data Structures - ways to store data
 //Algorithms - functions/ways to  use data structures to write programs
+
+//Good Programmers: Choose good data structures + write good algorithms = efficient programs
+
+
+// O(n!) - Factorial Time - most costly and steepest - adding a nested loop for every input that we have 
+//Probablay never see it - very expensive!!!
+
