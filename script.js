@@ -82,12 +82,11 @@
 //   for (var i = 0; i < 100; i++) {
 //     console.log('hi');
 //   }
-
 // }
 
 //Big O (1 + n/2 + 100) --> O(n + 1) --> O(n) drop the constants
 
-//Big O Rule 3 - Different Terms for Inputs
+//Big O Rule 3 - Different Terms for Inputs(different inputs should have different variables)
 
 // function compressBoxesTwice(boxes, boxes2) {
 //   boxes.forEach(function(boxes) {
@@ -99,24 +98,25 @@
 //   });
 // }
 
-//O(2n)-- > drop the constants-- > O(n) , but diff terms for inputs so that O(a+b)
+//O(2n) --> drop the constants --> O(n), but diff terms for inputs so that O(a+b) not O(2n)
 
 ///////  O(n^2)  ////////
 //Ex interview Question     *********************
 //Log all pairs of array
-const boxes = ['a', 'b', 'c', 'd', 'e'];
+// const boxes = ['a', 'b', 'c', 'd', 'e'];
 
-function logAllPairsOfArray(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      console.log(array[i], array[j])
-    }
-  }
-}
+// function logAllPairsOfArray(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array.length; j++) {
+//       console.log(array[i], array[j])
+//     }
+//   }
+// }
 
-logAllPairsOfArray(boxes)
+// logAllPairsOfArray(boxes)
 
-///  O(n*n) --> O(n^2) - Quadratic Time - not effecient (Horrible!)
+///  O(n*n) --> O(n^2) - Quadratic Time - not effecient (Horrible!) 
+//If its nested its O(n^2)
 // Interview question make O(n^2) more efficient 
 
 //Rule 3 - Part 2
@@ -131,6 +131,27 @@ logAllPairsOfArray(boxes)
 // }
 
 //O(2n)-- > drop the constants-- > O(n) , but diff terms for inputs so that O(a+b) because 2 different arrays.
+//Any step in the same indentation you add --> is O(a+b)
 //If O(a*b) then loops are nested and O(n^2)
-//Any step in the same indentation you add
 //Any step that is nested you multiply
+
+//Big O - Rule 4- Drop NonDominants - Worry most about the dominant Term as you scale
+
+function printAllNumbersThenAllPairSums(numbers) {
+  console.log('these are the numbers:');
+  numbers.forEach(function(number) {
+    console.log(number);
+  });
+
+  console.log('and these are thier sums:');
+  numbers.forEach(function(firstNumber) {
+    numbers.forEach(function(secondNumber) {
+      console.log(firstNumber + secondNumber);
+    })
+  })
+}
+
+printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
+
+//O(n+ n^2) --> O(n^2) --> drop the n and keep the dominant term O(n^2)
+
