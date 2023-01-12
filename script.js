@@ -215,15 +215,15 @@
 
 //Answer: Space Complexity is O(1)
 
-function arrayOfHiNTimes(n) {
-  let hiArray = [];
-  for (let i = 0; i < n; i++) {
-    hiArray[i] = 'hi';
-  }
-  console.log(hiArray);
-}
+// function arrayOfHiNTimes(n) {
+//   let hiArray = [];
+//   for (let i = 0; i < n; i++) {
+//     hiArray[i] = 'hi';
+//   }
+//   console.log(hiArray);
+// }
 
-arrayOfHiNTimes(6)
+// arrayOfHiNTimes(6)
 
 //What is the space complexity of this?
 // 1) new Data structure - hiArray = []
@@ -231,9 +231,51 @@ arrayOfHiNTimes(6)
 // 3) each item of array is additional memory 
 // ultimately O(8n) --> O(n) - b/c get rid of constants
 
-/// Trade off b/t saving time and saving space - nn to decide what your optimizing for.
+/// Trade off b/t saving time and saving space - nn to decide what your optimizing for time or space.
 
+//Twitter Exercise //
+//Twitter wants to allow users to be able to grab thier last tweet and thier first tweet
 
+// Find 1st, Find Nth
+
+//const array = ['hi', 'my', 'teddy'];
+
+// array[0]; //1st = O(1)
+// array[array.length - 1]; // last or teddy = O(1)
+
+//O(2) --> O(1) = constant Time
+
+//Compare tweets with dates - What is the big O of this operation?
+
+const array = [{
+  tweet: 'hi',
+  date: 2012,
+},
+{
+  tweet: 'my',
+  date: 2 - 14
+},
+{
+  tweet: 'teddy',
+  date: 2018
+}];
+
+array[0]; //1st = O(1)
+array[array.length - 1]; // last or teddy = O(1)
+
+//Because of the objects inside the array it will be nested loops to go through all the data. If person has a lot of tweets it will take alot of time.
+
+//Answer:  O(n^2) 
+//Tell boss to store in a different format so that it is not so costly
+
+/// Interview Question ////
+
+//What is the Big O of this:
+
+console.log('helwoshejhekhiuhudsh'.length)
+
+// It depends on the language
+//js .length is built in - it is a property of an object. // O(1) in JS
 
 
 
