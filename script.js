@@ -139,29 +139,29 @@
 
 //Big O - Rule 4- Drop NonDominants - Worry most about the dominant Term as you scale
 
-function printAllNumbersThenAllPairSums(numbers) {
-  console.log('these are the numbers:');
-  numbers.forEach(function(number) {
-    console.log(number);
-  });
+// function printAllNumbersThenAllPairSums(numbers) {
+//   console.log('these are the numbers:');
+//   numbers.forEach(function(number) {
+//     console.log(number);
+//   });
 
-  console.log('and these are thier sums:');
-  numbers.forEach(function(firstNumber) {
-    numbers.forEach(function(secondNumber) {
-      console.log(firstNumber + secondNumber);
-    })
-  })
-}
+//   console.log('and these are thier sums:');
+//   numbers.forEach(function(firstNumber) {
+//     numbers.forEach(function(secondNumber) {
+//       console.log(firstNumber + secondNumber);
+//     })
+//   })
+// }
 
-printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
+// printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
 
 //O(n+ n^2) --> O(n^2) --> drop the n and keep the dominant term O(n^2)
 
-//Scaleable means we worry about very large inputs
+//Scalable means we worry about very large inputs
 
 //All array methods have a Big O cost associated with them:
-  //Ex .pop() is O(1) 
-  //    .unshift is O(n)
+//Ex .pop() is O(1) 
+//    .unshift is O(n)
 
 //Certain data structures cost less for ex why use an array vs an object. Array might be less bu object allows use of more efficient functions.
 
@@ -173,4 +173,118 @@ printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
 
 // O(n!) - Factorial Time - most costly and steepest - adding a nested loop for every input that we have 
 //Probablay never see it - very expensive!!!
+
+//////  Exercise: Space Complexity //////
+//What is the space complexity of this in Big O? 
+
+// function boooooo(n) {
+//   for (let i = 0; i < n.length; i++) {
+//     console.log('booooo!')
+//   }
+// }
+
+// boooooo([1,2,3,4,5])
+
+// Answer: O(1)
+
+//What is the space complexity of this in Big O? 
+
+// function arrayOfHiNTimes(n) {
+//   let hiArray = [];
+//   for (let i = 0; i < n; i++) {
+//     hiArray[i] = 'hi';
+//   }
+//   return hiArray;
+// }
+
+// arrayOfHiNTimes(6)  //O(n)
+
+// Exercise Space Complexity //
+
+// function booooo(n) {
+//   for (let i = 0; i < n.length; i++) {
+//     console.log('booooo!');
+//   }
+// }
+
+// booooo([1, 2, 3, 4, 5])
+
+//What is the Space Complexity of this?
+// (don't include space taken by inputs)Don't really care  about how big input is (only have control within the function and how much space it takes)
+//The only memory it uses is storing let i = 0 so it's only 1.
+
+//Answer: Space Complexity is O(1)
+
+function arrayOfHiNTimes(n) {
+  let hiArray = [];
+  for (let i = 0; i < n; i++) {
+    hiArray[i] = 'hi';
+  }
+  console.log(hiArray);
+}
+
+arrayOfHiNTimes(6)
+
+//What is the space complexity of this?
+// 1) new Data structure - hiArray = []
+// 2) let i 
+// 3) each item of array is additional memory 
+// ultimately O(8n) --> O(n) - b/c get rid of constants
+
+/// Trade off b/t saving time and saving space - nn to decide what your optimizing for.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
