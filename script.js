@@ -247,21 +247,21 @@
 
 //Compare tweets with dates - What is the big O of this operation?
 
-const array = [{
-  tweet: 'hi',
-  date: 2012,
-},
-{
-  tweet: 'my',
-  date: 2 - 14
-},
-{
-  tweet: 'teddy',
-  date: 2018
-}];
+// const array = [{
+//   tweet: 'hi',
+//   date: 2012,
+// },
+// {
+//   tweet: 'my',
+//   date: 2 - 14
+// },
+// {
+//   tweet: 'teddy',
+//   date: 2018
+// }];
 
-array[0]; //1st = O(1)
-array[array.length - 1]; // last or teddy = O(1)
+// array[0]; //1st = O(1)
+// array[array.length - 1]; // last or teddy = O(1)
 
 //Because of the objects inside the array it will be nested loops to go through all the data. If person has a lot of tweets it will take alot of time.
 
@@ -272,24 +272,53 @@ array[array.length - 1]; // last or teddy = O(1)
 
 //What is the Big O of this:
 
-console.log('helwoshejhekhiuhudsh'.length)
+//console.log('helwoshejhekhiuhudsh'.length)
 
 // It depends on the language
 //js .length is built in - it is a property of an object. // O(1) in JS
 
+//JS Loops
 
+const nemo = ['nemo'];
+const everyone = ['dory', 'nemo', 'bruce', 'marlin', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank',];
 
+const large = new Array(100).fill('nemo');
 
+function findNemo(array) {
 
+  for (let i = 0; i < array.length; i++) {
+    console.log('running')
+    if (array[i] === 'nemo') {
+      console.log('Found NEMO!');
+      break;
+    }
+  }
 
+}
 
+findNemo(everyone);
 
+const findNemo2 = array => {
+  array.forEach(fish => {
+    if (fish === 'nemo') {
+      console.log('Found NEMO!');
+    }
+  })
+}
 
+const findNemo3 = array => {
+  for (let fish of array) {
+    if (fish === 'nemo') {
+      console.log('Found NEMO!');
+    }
+  }
+}
 
+findNemo2(everyone)
+findNemo3(everyone)
 
-
-
-
+// 3 different way to write/read the code
+// Is important when working with team-which code does team consider most readable?
 
 
 
